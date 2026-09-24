@@ -1,0 +1,20 @@
+{% extends "core/base.html" %}
+{% load static %}
+{% block title %}DELETION{% endblock title %}
+{% block head %}
+
+<link rel="stylesheet" href="{% static 'core/style.css'%}"/>
+
+{% endblock head %}
+{% block content %}
+<div class="login-container" style="text-align: center;">
+    <h2>Confirm Deletion</h2>
+    <p>Are you sure you want to delete <strong>"{{ media.title }}"</strong>?</p>
+    
+    <form method="POST" action="{% url 'delete_media' media.pk %}">
+        {% csrf_token %}
+        <button type="submit" class="button" style="background-color: #e74c3c;">Yes, Delete</button>
+        <a href="{% url 'blogs' %}" class="button" style="background-color: #718096; display: block; margin-top: 10px; text-decoration: none;">Cancel</a>
+    </form>
+</div>
+{% endblock %}

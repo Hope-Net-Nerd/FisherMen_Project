@@ -1,0 +1,25 @@
+{% extends "core/base.html" %}
+
+{% load static %}
+
+{% block head %}
+
+<link rel="stylesheet" href="{% static 'core/style.css'%}"/>
+
+{% endblock head %}
+
+{% block title %}Log-in | FisherMen{% endblock title %}
+
+{% block content %}
+
+<div class="login-container" >
+    <h2>Author Login</h2>
+    
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="button">Log In</button>
+    </form>
+    <p>Only Authorised Users<br> are allowed to <strong>Log-In</strong>.</p>
+</div>
+{% endblock content %}

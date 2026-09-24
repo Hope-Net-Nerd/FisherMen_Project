@@ -1,0 +1,21 @@
+{% extends "core/base.html" %}
+
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'core/style.css' %}"/>
+{% endblock head %}
+
+{% block title %}Books | FisherMen{% endblock title %}
+
+{% block content %}
+
+      <div class="center">
+         <h1>FisherMen Books</h1>
+         <p style="max-width: 600px; margin: 0 auto 1.5rem;">
+            Beyond comedy and digital media, FisherMen JNK produces original books exploring stories of resilience, philosophy, and personal growth.
+         </p>
+         <img src="{% static 'core/book.png' %}" alt="FisherMen Books" style="border-radius: 15px; width: 250px; height: 250px; object-fit: cover;"/>
+      </div>
+
+{% endblock content %}

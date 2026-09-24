@@ -1,0 +1,36 @@
+{% extends "core/base.html" %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'core/style.css'%}"/>
+{% endblock head %}
+
+{% block title %}Blogs | FisherMen{% endblock title %}
+
+{% block content %}
+
+<h1 class="center">This Is What I Wanted To Share With You All..</h1>
+
+<div class="blog-container">
+   {% if posts %}
+      {% for post in posts %}
+         <article class="blog-card">  
+            <h2>{{ post.title }}</h2> 
+            <p class="date">{{ post.created_at|date:"F d, Y" }}</p>
+            <p>{{ post.content|safe|linebreaks }}</p>
+
+            {# Only renders if logged in and the logged-in user created the post #}
+            {% if request.user.is_authenticated and request.user == post.author %}
+               <div style="margin-top: 1.5rem; padding-top: 0.8rem; border-top: 1px solid #333; display: flex; gap: 10px;">
+                  <a href="{% url 'edit_media' post.pk %}" class="button" style="padding: 6px 12px; font-size: 0.85rem; text-decoration: none;">Edit</a>
+                  <a href="{% url 'delete_media' post.pk %}" class="button" style="padding: 6px 12px; font-size: 0.85rem; background-color: #e74c3c; text-decoration: none;">Delete</a>
+               </div>
+            {% endif %}
+         </article>
+      {% endfor %} 
+   {% else %}
+      <p class="center"><strong>Ooops. We do not have <em>anything</em> so far now, Take Care.</strong></p>
+   {% endif %}
+</div>
+
+{% endblock content %}

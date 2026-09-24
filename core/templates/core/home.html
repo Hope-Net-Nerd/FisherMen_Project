@@ -1,0 +1,195 @@
+{% extends "core/base.html" %}
+
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'core/style.css' %}"/>
+{% endblock head %}
+
+{% block title %}Home | FisherMen{% endblock title %}
+
+{% block content %}
+      <div class="center">
+         <h1 class="pos">Welcome to FisherMen JNK Media House</h1>
+         <em><p style="color:yellow">"Your response is our influence."</p></em>
+      </div>
+      <div>
+         <img src="{% static 'core/logo.png' %}" class="pos" title="FisherMen" alt="FisherMen Logo"/>
+      </div>
+      <div id="introduction">
+         <h1>About FisherMen JNK</h1>
+            <p>
+               <strong>FisherMen JNK</strong> is a media company focused on printing, publishing, and digital content. Our mission is to support local communities and give emerging creatives access to professional media expertise.
+               <br>
+               The "JNK" in our name comes from our founders: the <em>“J”</em> stands for <strong>Jafta</strong>, and the <em>“K”</em> stands for <a href="#Katlego"><strong>Katlego</strong></a>.
+               <br>
+               Founded in 2019 by <strong>Jafta Masemola</strong> and <strong>Katlego M. Masemola</strong>, FisherMen JNK was created to bring professional creative standards into rural areas and townships.
+               <br>
+               Outside of work, I stay sharp through competitive chess, bringing strategic thinking into everything we build.
+               <br>
+               At the end of the day, building a lasting business takes hard work and execution.
+            </p>
+      </div>
+
+      <div>
+         <h3>How has the organization grown since you started?</h3>
+            <p>
+               When we started, we had huge ambition but very little market experience. We jumped in too fast without understanding the industry, which led to a lot of tough lessons.<br>
+               Since then, we’ve been steadily refining our approach—understanding our audience and improving how we deliver our work. Mistakes were made, but our core vision hasn't changed.<br>
+               It’s been a real lesson in resilience, and we're still actively building and improving as we go.
+            </p>
+      </div>
+
+      <div>
+         <h3>What key experiences shaped your work ethic, and how do they guide you today?</h3>
+            <em>Calculated Risk and Resilience</em>.
+               <p>
+                  Fear of failure holds too many people back. Taking hits early on taught me to work efficiently with whatever resources we have.
+                  <br>
+                  We turned those challenges into our strengths.
+                  <br>
+                  Why are we so hands-on out in public?
+                  <br>
+                  It's about building a real presence. We are actively growing our brand while delivering solid work.
+                  <br>
+                  Public spaces aren't just for hanging out—they are our workspace, and interacting directly with real people keeps our content authentic.
+               </p>
+      </div>
+
+      <div>
+         <h3>What role does humor play in your work and style?</h3>
+            <p>
+               Humor shows resilience, sharp thinking, and personality. Our content uses observational satire to comment on everyday life.
+               <br>
+               On camera, I bring high energy to my delivery. 
+               <br>
+               While I'm always refining my style, staying genuine is non-negotiable.
+            </p>
+      </div>
+      
+      <div>
+         <h3>When did you realize your work had an impact beyond just entertainment?</h3>
+            <p>
+               I realized it when I was out in public, expecting to blend in, and someone recognized me and called out,
+               <a href="https://youtu.be/8PxLzHZq0po?si=8LH1L3P8xDIu1zFB" target="_blank"> “Colog-ne!”</a>
+               It was unexpected, but it showed how far our reach actually goes.
+               <br>
+               What makes us proudest is inspiring our audience. People often ask us about our work and its impact, which reminds us of our responsibility to mentor others well.
+            </p>
+         </div>
+
+      <div>
+         <h3>Besides digital media and comedy, you’re also an author. What made you start publishing?</h3>
+               <p>
+                  Writing is how I process ideas. With so many creative and strategic thoughts constantly running through my head, writing helps me organize them.
+                  <br>
+                  At my core, I consider myself a professional writer navigating modern media. I have also written <a href="{% url 'books' %}"><strong>books</strong></a>.
+               </p>
+      </div>
+
+      <div>
+         <h3>What core themes do you explore in your books, and why do they matter?</h3>
+            <p>
+               Each book explores different themes like redemption, hardship, self-reflection, and personal accountability.
+               <br>
+               For example, <em>Infinite Thoughts</em> dives into the personal growth journey—understanding that to navigate our own lives, we first need to understand human nature.
+               <br>
+               Empathy and awareness are key to bringing people together.
+            </p>
+      </div>
+
+      <div id="Katlego"> 
+         <h1 class="center">Katlego M. Masemola</h1>
+         <img src="{% static 'core/katlego.png' %}" class="pos" title="Katlego Masemola" alt="Portrait of Katlego Masemola"/>
+      </div>
+      
+      <div>
+         <h3>Do you see a conflict between your comedic work and your writing?</h3>
+            <p>
+               Not at all. Writing deeply actually gives my comedy more balance. Combining lighthearted public content with serious, thoughtful writing is a deliberate mix in my work.
+            </p>
+      </div>
+
+      <div>
+         <h3>What keeps you motivated when growth is slow or attention is low?</h3>
+         <p>
+            Our dedicated audience.
+            Our motto, <em>“Your response is our influence,”</em> drives everything we do. Regardless of numbers in the short term, people still value what we offer, and we still have big goals to achieve.
+         </p>
+      </div>
+
+      <div>
+         <h3>What core ethical principles guide your content and brand?</h3>
+         <p>
+            Integrity and respect. We strictly avoid exploiting or disrespecting our audience, especially when covering sensitive topics.
+            <br>
+            While media is entertainment, it affects real lives.
+            <br>
+            If upholding high standards means growing a bit slower, that’s a trade-off we’re happy to make.
+         </p>
+      </div>
+
+      <div>
+         <h3>How do you stay focused during periods of pressure or criticism?</h3>
+         <p>
+            By staying focused on the main goal. Criticism and external noise are just part of the process.
+            <br>
+            Playing competitive sports taught me to push through tough moments and stay disciplined.
+            <br>
+            We are still at the very beginning of our journey.
+         </p>
+      </div>
+
+      <div>
+         <h3>What is the plan for FisherMen JNK over the next year?</h3>
+            <p>
+               Upgrading our video and audio gear, expanding our digital marketing, and refining our publishing pipeline.
+               <br>
+               We are focused on growing from an emerging team into an industry leader.
+            </p>
+      </div>
+
+      <div>
+         <i><h3>What long-term impact do you want FisherMen JNK to have on local communities?</h3></i>
+         <p>
+            We want to support young people facing tough circumstances or career doubt, proving that you can overcome local limitations.
+            <br>
+            Our mission is to bring media expertise and opportunities out of big cities and directly into rural areas and townships.
+         </p>
+      </div>
+
+      <div>
+         <h3>Beyond entertainment, what legacy do you want to leave?</h3>
+            <p>
+               A lasting intellectual and creative impact through literature and storytelling.
+               Projects like <em>Ramblings</em> on <a href="https://www.youtube.com/@Fishermenjnk" title="YouTube" target="_blank">YouTube</a>, along with books like <em>Infinite Thoughts</em> and <em>Stofi: Chaos of Entropy</em> (on Visionary Writings), show what FisherMen JNK can do.
+               <br>
+               We want to create work with real depth and substance.
+            </p>
+      </div>
+
+      <div>      
+         <h3>What is the biggest misconception about FisherMen JNK?</h3>
+         <p>
+            People often assume we’re a fishing business! We are strictly a media and publishing enterprise offering editing, copywriting, and creative brand promotion.
+            <br>
+            We also focus heavily on giving local artists a platform to showcase their work.
+         </p>
+      </div>
+
+      <div>
+         <h3>What advice would you give to young creators trying to establish themselves?</h3>
+            <p>
+               Action beats talking. Doing the work is the only way to learn and build real confidence.
+               <br>
+               Take smart risks, start executing, and build.
+            </p>
+         </div>
+      <div id="locate">
+         <p>Find our official channels and media links on <a href="{% url 'about' %}" title="About FisherMen" style="color:red;"><em>FisherMen</em></a>.</p>
+      </div>
+      <div>
+         <p>Read more articles and statements on our <a href="{% url 'blogs' %}">Blogs</a> page.</p>
+      </div>
+
+{% endblock content %}

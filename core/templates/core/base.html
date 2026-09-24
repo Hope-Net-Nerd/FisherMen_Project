@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+   
+   <head>
+      <title>{%block title%} {%endblock%}</title>
+      <link rel="icon" type="image/png" href="{% static 'core/logo.png' %}" />
+     
+      {% block head %}
+
+      {% endblock %}
+   </head>
+   <body>
+            
+     
+      <header class="header">
+         <a href="{% url 'home' %}" style="text-decoration: none; font-weight: bold; color: white ;" title="home">HOME</a>
+         <a href="{% url 'post' %}" style="text-decoration: none; font-weight: bold; color: white ;" title="publish" >PUBLISH</a>
+         
+        
+         {% if user.is_authenticated %}
+            <form action="{% url 'logout' %}" method="post" style="margin: 0;">
+               {% csrf_token %}
+               <button type="submit" title="logout" style="background: #d73a49; color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer;">
+                  Log Out
+               </button>
+            </form>
+         {% endif %}
+      </header>
+
+      {% block content %}
+      {% endblock %}
+   </body>
+
+</html>
