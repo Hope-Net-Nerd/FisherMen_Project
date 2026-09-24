@@ -26,3 +26,6 @@ jobs:
       - name: Run Tests
         run: |
           python manage.py test
+      - name: Deploy
+        run: |
+          echo "Deploying..."
